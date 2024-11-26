@@ -12,15 +12,24 @@
     background-color: bisque;
 }
 
-.carousel{
-    background-size: cover;
-    background-position: center;
-}
-
 .container-fluid{
     justify-content: space-between;
     background-color: gainsboro;
 }
+
+h1{
+    text-align: center;
+    padding: 5%;
+}
+
+.carousel{
+    background-size: cover;
+    background-position: center;
+    width: 75%;
+    height: 25%;
+}
+
+
 
 /* footer */
 
