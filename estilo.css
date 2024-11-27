@@ -8,9 +8,11 @@
     font-family: "Noto Sans", sans-serif;
 }
 
+/* nav */
+
 nav{
     display: flex;
-    padding: 1%;
+    padding-top: 1%;
     background-color: #c4b9f5;
     justify-content: space-between;
     font-size: 20px;
@@ -32,7 +34,80 @@ nav li{
     display: inline-block;
 }
 
+.logo{
+  padding-left: 4%;
+}
 
+.box {
+  width: auto;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+.boton {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+/* main */
 
 .main{
     padding: 5%;
@@ -60,6 +135,10 @@ p{
 
 .form-label{
   color: antiquewhite;
+}
+
+.center-form{
+  padding-left: 40%;
 }
 
 /*productos*/
@@ -166,6 +245,33 @@ p{
   font-weight: 500;
 }
 
+.item1 .card-image{
+  background-image: url(img/album1-2.jpg);
+}
+
+.item2 .card-image{
+  background-image: url(img/album3-1.jpg);
+}
+
+.item3 .card-image{
+  background-image: url(img/album4.jpg);
+}
+
+.item4 .card-image{
+  background-image: url(img/album5.jpg);
+}
+
+.item5 .card-image{
+  background-image: url(img/album6.png);
+}
+
+.item6 .card-image{
+  background-image: url(img/album7.jpg);
+}
+
+.item7 .card-image{
+  background-image: url(img/album8.jpg);
+}
 
 /*log in*/
 .form {
