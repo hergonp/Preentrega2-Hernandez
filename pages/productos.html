@@ -14,11 +14,13 @@
 <body>
   <header>
     <!--Menu desktop-->
+
     <div class="navbar">
       <div class="logo">
         <a href="../index.html">Demu</a>
         <img src="../img/flower_nature_lotus_plant_icon_258396.ico" width="45px">
       </div>
+
       <ul class="menu-links">
         <li>
           <a href="../index.html">Inicio</a>
@@ -36,27 +38,35 @@
           <a href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a>
         </li>
       </ul>
-      <!--Menu responsive-->
-      <div class="toggle-btn"><i class="fa-solid fa-bars"></i></div>
-      <div class="menu-cascada">
-          <li>
-            <a href="../index.html">Inicio</a>
+      <!--menu responsive-->
+      <div class="col-lg-6">
+      <button class="navbar-toggler" type="button" style="color: black;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 ms-auto me-5 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" href="../index.html">Inicio</a>
           </li>
-          <li>
-            <a href="productos.html">Productos</a>
+          <li class="nav-item">
+            <a class="nav-link active text-light" href="productos.html">Productos</a>
           </li>
-          <li>
-            <a href="centroayuda.html">Centro de ayuda</a>
+          <li class="nav-item">
+            <a class="nav-link active text-light" href="centroayuda.html">Centro de ayuda</a>
           </li>
-          <li>
-            <a href="contacto.html">Contacto</a>
+          <li class="nav-item">
+            <a class="nav-link active text-light" href="contacto.html">Contacto</a>
           </li>
-          <li>
-            <a href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a>
+          <li class="nav-item">
+            <a class="nav-link active text-light" href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a>
           </li>
+        </ul>
       </div>
     </div>
+    </div>
 
+    
   </header>
 
   <main class="main">
@@ -229,11 +239,11 @@
     const toggleBtn = document.querySelector('.toggle-btn')
     const toggleBtnIcon = document.querySelector('.toggle-btn i')
     const dropDownMenu = document.querySelector('.menu-cascada')
-    
-    toggleBtn.onclick = function (){
+
+    toggleBtn.onclick = function () {
       dropDownMenu.classList.toggle('.open')
       const isOpen = dropDownMenu.classList.contains('.open')
-      
+
       toggleBtnIcon.classList = isOpen
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars'
