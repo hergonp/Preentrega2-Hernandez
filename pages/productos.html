@@ -13,60 +13,54 @@
 
 <body>
   <header>
-    <nav>
+    <!--Menu desktop-->
+    <div class="navbar">
       <div class="logo">
         <a href="../index.html">Demu</a>
         <img src="../img/flower_nature_lotus_plant_icon_258396.ico" width="45px">
       </div>
-      <div class="menu">
-        <ul>
+      <ul class="menu-links">
+        <li>
+          <a href="../index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="productos.html">Productos</a>
+        </li>
+        <li>
+          <a href="centroayuda.html">Centro de ayuda</a>
+        </li>
+        <li>
+          <a href="contacto.html">Contacto</a>
+        </li>
+        <li>
+          <a href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a>
+        </li>
+      </ul>
+      <!--Menu responsive-->
+      <div class="toggle-btn"><i class="fa-solid fa-bars"></i></div>
+      <div class="menu-cascada">
           <li>
-            <button class="boton">
-              <span class="box">
-                <a href="../index.html">Inicio</a>
-              </span>
-            </button>
-
+            <a href="../index.html">Inicio</a>
           </li>
           <li>
-            <button class="boton">
-              <span class="box">
-                <a href="productos.html">Productos</a>
-              </span>
-            </button>
-
+            <a href="productos.html">Productos</a>
           </li>
           <li>
-            <button class="boton">
-              <span class="box">
-                <a href="centroayuda.html">Centro de ayuda</a>
-              </span>
-            </button>
-
+            <a href="centroayuda.html">Centro de ayuda</a>
           </li>
           <li>
-            <button class="boton">
-              <span class="box">
-                <a href="contacto.html">Contacto</a>
-              </span>
-            </button>
-
+            <a href="contacto.html">Contacto</a>
           </li>
           <li>
-            <button class="boton">
-              <span class="box">
-                <i class="fa-solid fa-user"></i>
-                <a href="login.html">Ingresar</a>
-              </span>
-            </button>
-
+            <a href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a>
           </li>
-        </ul>
       </div>
-    </nav>
+    </div>
+
   </header>
 
   <main class="main">
+    <!--Galeria de productos-->
     <section class="galeria">
       <div class="item item1">
         <div class="card">
@@ -215,7 +209,7 @@
       </div>
     </section>
   </main>
-
+  <!--footer -->
   <footer class="footer">
     <p>Todos los derechos reservados por Ameu</p>
     <div class="redes">
@@ -231,6 +225,20 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const toggleBtn = document.querySelector('.toggle-btn')
+    const toggleBtnIcon = document.querySelector('.toggle-btn i')
+    const dropDownMenu = document.querySelector('.menu-cascada')
+    
+    toggleBtn.onclick = function (){
+      dropDownMenu.classList.toggle('.open')
+      const isOpen = dropDownMenu.classList.contains('.open')
+      
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
 </body>
 
 </html>
