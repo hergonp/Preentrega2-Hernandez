@@ -518,7 +518,7 @@ input:not(:placeholder-shown) ~ .reset {
     height: auto;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 645px) {
   .galeria {
     grid-template-columns: repeat(2, 1fr);
   }
